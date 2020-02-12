@@ -16,7 +16,7 @@ namespace BooksCatalogue.Controllers
         // private string apiEndpoint = "https://bookscatalogueapi-dicoding.azurewebsites.net/api/books/";
         private string apiEndpoint = "https://localhost:8000/api/books/";
         private readonly HttpClient _client;
-        HttpClientHandler clientHandler = new HttpClientHandler();
+        HttpClientHandler clientHandler = new HttpClientHandler(clientHandler);
         public BooksController()
         {
             // Use this client handler to bypass ssl policy errors
